@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tabler/icons": "^1.119.0",
+    "clsx": "^1.2.1",
+    "clx": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
