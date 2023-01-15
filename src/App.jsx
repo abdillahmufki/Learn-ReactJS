@@ -1,65 +1,39 @@
-import {
-  IconBrandTwitter,
-  IconBrandFacebook,
-  IconBrandGithub,
-} from "@tabler/icons";
+import { IconBrandGithub } from "@tabler/icons";
 
-import clsx from "clsx";
+import Card from "./components/Card";
+import Button from "./components/Button";
+import Tms from "./assets/img/tms.png";
 
-export default function App() {
+const App = () => {
   const type = "submit";
   const onClick = () => console.log("Login with another style...");
   return (
-    <div className={"bg-slate-900 grid place-content-center min-h-screen"}>
-      <div className={"flex gap-x-2"}>
-        <Button
-          {...{
-            type,
-            onClick,
-          }}>
-          <IconBrandFacebook />
-          Register
-        </Button>
-
-        <Button
-          className={"bg-blue-600"}
-          onClick={() => console.log("Register")}
-          type="button">
-          <IconBrandFacebook />
-          Register
-        </Button>
-
-        <Button
-          className={"bg-black"}
-          onClick={() => console.log("Login")}
-          type="submit">
-          <IconBrandTwitter />
-          Login
-        </Button>
-
-        <Button
-          className={"bg-pink-600"}
-          onClick={() => console.log("Login")}
-          type="submit">
-          <IconBrandGithub />
-          Login
-        </Button>
+    <div
+      className={
+        "bg-slate-50 text-slate-800 tracking-tight antialiased flex items-center justify-center min-h-screen"
+      }>
+      <div className={"max-w-md w-full"}>
+        <Card>
+          <Card.Title>Hello Coding</Card.Title>
+          <Card.Body>
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a more-or-less normal
+            distribution of letters, as opposed to using 'Content here, content
+            here', making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default
+            model text, and a search for 'lorem ipsum' will uncover many web
+            sites still in their infancy. Various versions have evolved over the
+            years, sometimes by accident, sometimes on purpose (injected humour
+            and the like).
+          </Card.Body>
+          <Card.Footer>
+            <Button>Register</Button>
+          </Card.Footer>
+        </Card>
       </div>
     </div>
   );
-}
+};
 
-function Button(props) {
-  const { className = "bg-blue-600", children, text, type = "submit" } = props;
-  return (
-    <button
-      {...props}
-      type={type}
-      className={clsx(
-        className,
-        "[&>svg]:w-5 [&>svg]:h-5 [&>svg]:stroke-1 flex items-center gap-x-2 text-white px-4 py-2 rounded"
-      )}>
-      {text || children}
-    </button>
-  );
-}
+export default App;
