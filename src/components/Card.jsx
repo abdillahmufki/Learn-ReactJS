@@ -1,17 +1,21 @@
 const Card = ({ children }) => {
-  return <div className="shadow-lg rounded-lg overflow-hidden">{children}</div>;
+  return (
+    <div className="drop-shadow-2xl border-zinc-600 rounded-lg overflow-hidden">
+      {children}
+    </div>
+  );
 };
 
 const Title = ({ children }) => {
   return (
-    <div className={"border-b p-4"}>
-      <h1 className={"text-xl"}>{children}</h1>
+    <div className={"border-b bg-slate-100 p-4"}>
+      <h1 className={"text-xl  text-blue-700 font-bold"}>{children}</h1>
     </div>
   );
 };
 
 const Body = ({ children }) => {
-  return <div className={"leaing-relaxed p-4"}>{children}</div>;
+  return <div className={"bg-slate-100 leaing-relaxed p-4"}>{children}</div>;
 };
 
 const Footer = ({ children }) => {
