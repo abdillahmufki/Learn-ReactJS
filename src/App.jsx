@@ -1,27 +1,33 @@
-import PlaceContentCenter from "./components/PlaceContentCenter";
+import { IconBrandGithub } from "@tabler/icons";
+import Card from "./components/Card";
 import Button from "./components/Button";
-import { useState } from "react";
+import PlaceContentCenter from "./components/PlaceContentCenter";
+import Input from "./components/Input";
 
 const App = () => {
-  const [count, setCount] = useState(0);
-
-  function handleClick() {
-    setCount((x) => x + 1);
-  }
   return (
     <PlaceContentCenter>
-      <h1 className={"text-5xl font-bold"}>{count}</h1>
-      <div className="mt-5 flex items-center gap-2">
-        <Button onClick={handleClick}>+ 1</Button>
-        <Button
-          onClick={() => {
-            handleClick();
-            handleClick();
-            handleClick();
-          }}>
-          + 3
+      <Card.Title>Sign up for new account!</Card.Title>
+      <Card.Body>
+        <div className="mb-6">
+          <label htmlFor="name" className="mr-2">
+            Name
+          </label>
+          <Input id={"name"} name={"name"} />
+        </div>
+        <div className="mb-6">
+          <label htmlFor="email" className="mr-2">
+            Email
+          </label>
+          <Input id={"email"} email={"email"} />
+        </div>
+      </Card.Body>
+      <Card.Footer>
+        <Button>
+          <IconBrandGithub />
+          Register
         </Button>
-      </div>
+      </Card.Footer>
     </PlaceContentCenter>
   );
 };

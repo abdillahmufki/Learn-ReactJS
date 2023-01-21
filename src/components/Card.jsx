@@ -9,13 +9,17 @@ const Card = ({ children }) => {
 const Title = ({ children }) => {
   return (
     <div className={"border-b bg-slate-100 p-4"}>
-      <h1 className={"text-xl  text-blue-700 font-bold"}>{children}</h1>
+      <h1 className={"text-xl  text-black font-bold"}>{children}</h1>
     </div>
   );
 };
 
 const Body = ({ children }) => {
-  return <div className={"bg-slate-100 leaing-relaxed p-4"}>{children}</div>;
+  return (
+    <div className={"bg-slate-100 text-black leaing-relaxed p-4"}>
+      {children}
+    </div>
+  );
 };
 
 const Footer = ({ children }) => {

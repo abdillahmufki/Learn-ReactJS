@@ -1,7 +1,7 @@
 import clsx from "clsx";
 const Button = (props) => {
   const {
-    className = "bg-blue-600 hover:bg-sky-700",
+    className = "bg-black hover:bg-sky-700",
     children,
     text,
     type = "submit",
